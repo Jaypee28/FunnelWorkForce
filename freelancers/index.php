@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Freelancers</title>
+  <title>FunnelWorkForce-Freelancer Dashboard</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/homepage.css">
 
   <link rel="stylesheet" type="text/css" href="../assets/css/semantic.min.css">
@@ -59,6 +59,44 @@
   .ui.button a:hover{
     background-color: red;
   }
+
+  .navlink a{
+  color: grey;
+}
+  .navlink a:hover{
+  color: #4183c4;
+}
+
+.ui.relaxed.divided.list a{
+  color: grey !important;
+}
+.ui.grid>.relaxed.row>.column, .ui.relaxed.grid>.column:not(.row), .ui.relaxed.grid>.row>.column {
+    padding-left: .7rem;
+    padding-right: .7rem;
+}
+
+button.ui.blue.basic.button:hover {
+    background-color: #2185d0!important;
+    color: white!important;
+}
+
+button.ui.red.basic.button:hover {
+    background-color: red!important;
+    color: white!important;
+}
+
+button.ui.positive.basic.button:hover {
+    background-color: #21ba45!important;
+    color: white!important;
+}
+
+.company_logo img{
+  height: 37px;
+  width: 100px;
+  float: right;
+  border: 1px solid #e1e1e1;
+  padding: 2px;
+}
   @media only screen and (max-width: 800px) 
   {
     .ui.fixed.menu {
@@ -88,9 +126,9 @@
   </div>
   <!-- //RESPONSIVE NAV -->
 
-  <!-- CATEGORIES_LIST -->
-
-  <!-- //CATEGORIES LIST -->
+  <!-- RESPONSIVE LIST JOB TYPE -->
+  
+  <!-- //RESPONSIVE LIST JOB TYPE -->
 
   <!-- Sidebar -->
   <div id="mySidenav" class="sidenav">
@@ -103,8 +141,8 @@
   <div class="results"></div>
 </div>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="login.php">Login</a>
-  <a href="signup.php">Sign up</a>
+  <a href="../login.php">Login</a>
+  <a href="../signup.php">Sign up</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
   <a>
@@ -119,24 +157,22 @@
   <!-- Navbar -->
   <div class="ui large fixed menu borderless" style="padding-left: 13%; padding-right: 13%; margin-bottom: 12%; padding-top: .1%; padding-bottom: .1%;">
     <div class="item">
-      <a class="logo" href="../index.php">
+      <a class="logo" href="index.php">
         <strong>FunnelWorkForce</strong>
       </a>
     </div>
-  <div class="ui pointing dropdown link item">
-    <span>Find Work</span>
+  <div class="ui pointing dropdown link item navlink">
+    <a>Accept Work</a>
     <div class="menu" style="font-size: 13px;">
-      <a class="item" href="">Find Work</a>
+      <a class="item" href="">Accept Work</a>
       <a class="item" href="">Saved Jobs</a>
-      <a class="item" href="">Proposals</a>
       <a class="item" href="">Profile</a>
       <a class="item" href="">My Stats</a>
-      <a class="item" href="">Tests</a>
     </div>
   </div>
   
-    <div class="ui pointing dropdown link item">
-    <span>My Jobs</span>
+    <div class="ui pointing dropdown link item navlink">
+    <a>My Jobs</a>
     <div class="menu" style="font-size: 13px;">
       <div class="item">My Jobs</div>
       <div class="item">All Contracts</div>
@@ -144,24 +180,9 @@
     </div>
   </div>
 
-  <div class="ui pointing dropdown link item">
-    <span>Reports</span>
-    <div class="menu" style="font-size: 13px;">
-      <div class="item">Overview</div>
-      <div class="item">Timesheet Details</div>
-      <div class="item">Time Analyze</div>
-      <div class="item">Earnings by Client</div>
-      <div class="item">Lifetime Billings by Client</div>
-      <div class="item">Weekly Timesheet</div>
-      <div class="item">Timelogs</div>
-      <div class="item">Connects History</div>
-      <div class="item">Transaction History</div>
-      <div class="item">Certificate of Earnings</div>
-    </div>
+  <div class="item navlink">
+    <a href="">Messages</a>
   </div>
-  <a class="item">
-    Messages
-  </a>
   
   <div class="right menu">
     <div class="item">
@@ -170,27 +191,291 @@
       <i class="search icon"></i>
     </div>
   </div>
-    <div class="item">
-    <div class="ui pointing dropdown link item">
-    <span>Username</span>
-    <div class="menu" style="font-size: 13px;">
+  <div class="item navlink">
+    <a href=""><i class="question icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+    <a href=""><i class="bell icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+    <a href=""><i class="user plus icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+  </div>
+    <!-- Username Dropdown -->
+    <div class="ui pointing dropdown link item navlink">
+    <a href=""><i class="user circle icon" style="font-size: 28px; text-align: right;"></i></a>
+    <div class="menu" style="font-size: 13px; width: auto; padding: auto;">
       <div class="item">
         <div class="ui buttons">
       <button class="ui positive button">Online</button>
       <button class="ui button">Offline</button>
         </div><br><br>
-        <img class="ui avatar image" src="/images/wireframe/square-image.png">
-        <span>Username</span>
       </div>
-     
+
+      <div class="item">
+       <img class="ui small image" src="../../assets/img/img_avatar.png">
+        <span><strong>Sample Sample</strong></span>
+        <p style="padding-left: 38px;">Freelancer</p>
+      </div>
+      <div class="item">
+       <img class="ui small image" src="../../assets/img/img_avatar.png">
+        <span><strong>Sample Sample</strong></span>
+        <p style="padding-left: 38px;">Client</p>
+      </div>
+      <div class="item">
+        <i class="cog icon" style="padding-right: 29px;"></i><span><b>Settings</b></span>
+      </div>
+      <div class="item">
+        <i class="sign out alternate icon" style="padding-right: 29px;"></i><span><b>Log out</b></span>
+      </div>
     </div>
   </div>
-    </div>
+    
+    <!-- //Username Dropdown -->
   </div>
   </div>
   <!-- //Navbar -->
 
-   <div class="ui inverted footer vertical segment center" style="position: absolute; bottom: 0; width: 100%;">
+   <div class="ui grid stackable relaxed page" style="margin-bottom: 20%;">
+    
+    <div class="one column one column mobile demo row">
+   <div class="sixteen wide column" style="margin-bottom: 20px; margin-top: -10px;"><h1>Dashboard</h1></div>
+
+      <!-- Section 1 -->
+    <div class="five wide column" style="margin-top: -10px;">
+      <div class="ui fluid card">
+  <div class="content">
+    <div class="ui list">
+  <div class="item">
+    <img class="ui avatar image" src="../assets/img/img_avatar.png" style="height: 60px; width: 60px;">
+    <div class="content" style="padding-top: 12px;">
+      <h3 class="header">Username</h3>
+      <div class="description">Iloilo</div>
+    </div>
+  </div>
+</div>
+    <div class="description" style="padding-top: 10px;">
+  <div class="ui list">
+  <div class="item">0999999999<a style="float: right;"><i class="pencil alternate icon"></i></a></div><br>
+  <div class="item">sample@gmail.com<a style="float: right;"><i class="pencil alternate icon"></i></a></div><br>
+  <div class="item">
+    <div class="ui blue progress">
+  <div class="bar">
+    <div class="progress"></div>
+  </div>
+  <div class="label">Finish Your Profile</div>
+</div>
+  </div>
+</div>
+<div class="btn_profile_container" style="padding-top: 20px; text-align: center;">
+  <a href="fl_profile.php"><button class="ui blue basic button fluid">Update Your Profile</button></a>
+  </div>
+    </div>
+  </div>
+</div>
+
+  <!-- s1 s2 -->
+<div class="ui fluid card">
+  <div class="content">
+<div class="ui relaxed divided list">
+  <div class="item">
+    <div class="content" style="padding: 3% 0%;">
+      <a class="header">Recommended Jobs</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="content" style="padding: 3% 0%;">
+      <a class="header">Completed Jobs</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="content" style="padding: 3% 0%;">
+      <a class="header">Accepted Jobs</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="content" style="padding: 3% 0%;">
+      <a class="header">Declined Jobs</a>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<!-- //s1 s2 -->
+    </div>
+    <!-- //Section 1 -->
+
+    <!-- Section 2 -->
+    <div class="eleven wide column" style="margin-top: -10px; padding-left: -10px;">
+  <div class="ui fluid card" style="padding: 10px; background-color: white;">
+  <h2>Jobs</h2>
+</div>
+
+<!-- s2 s2 -->
+
+<!-- Jobs List -->
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <div class="ui fluid card job_card">
+  <div class="content">
+    <div class="header">Sample Job
+      <span class="company_logo">
+          <img src="../assets/img/fwflogo.png">
+        </span>
+    </div>
+    <div class="meta" style="color: #4183c4;">
+      <span class="category">Sample Company</span>
+    </div>
+      <div class="ui grid" style="padding-top: 10px;">
+        <div class="seven wide column">
+      <i class="location arrow icon"></i>
+      <label>Sample Location</label>
+    </div>
+    <div class="nine wide column">
+      <i class="briefcase icon"></i>
+      <label>Sample Contract</label>
+    </div>
+  </div>
+  <div class="description" style="color: grey; padding-top: 10px;">
+    Sample text Sample text Sample text Sample text
+    </div>
+  </div>
+  <div class="extra content" style="text-align: right;">
+    <i class="star icon"></i>
+    <i class="share alternate icon"></i>
+    <button class="ui red basic button">Decline</button>
+    <button class="ui positive basic button">Accept</button>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <!-- //Jobs List -->
+
+  <!-- Jobs List -->
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <div class="ui fluid card job_card">
+  <div class="content">
+    <div class="header">Sample Job
+      <span class="company_logo">
+          <img src="../assets/img/fwflogo.png">
+        </span>
+    </div>
+    <div class="meta" style="color: #4183c4;">
+      <span class="category">Sample Company</span>
+    </div>
+      <div class="ui grid" style="padding-top: 10px;">
+        <div class="seven wide column">
+      <i class="location arrow icon"></i>
+      <label>Sample Location</label>
+    </div>
+    <div class="nine wide column">
+      <i class="briefcase icon"></i>
+      <label>Sample Contract</label>
+    </div>
+  </div>
+  <div class="description" style="color: grey; padding-top: 10px;">
+    Sample text Sample text Sample text Sample text
+    </div>
+  </div>
+  <div class="extra content" style="text-align: right;">
+    <i class="star icon"></i>
+    <i class="share alternate icon"></i>
+    <button class="ui red basic button">Decline</button>
+    <button class="ui positive basic button">Accept</button>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <!-- //Jobs List -->
+
+<!-- Jobs List -->
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <div class="ui fluid card job_card">
+  <div class="content">
+    <div class="header">Sample Job
+      <span class="company_logo">
+          <img src="../assets/img/fwflogo.png">
+        </span>
+    </div>
+    <div class="meta" style="color: #4183c4;">
+      <span class="category">Sample Company</span>
+    </div>
+      <div class="ui grid" style="padding-top: 10px;">
+        <div class="seven wide column">
+      <i class="location arrow icon"></i>
+      <label>Sample Location</label>
+    </div>
+    <div class="nine wide column">
+      <i class="briefcase icon"></i>
+      <label>Sample Contract</label>
+    </div>
+  </div>
+  <div class="description" style="color: grey; padding-top: 10px;">
+    Sample text Sample text Sample text Sample text
+    </div>
+  </div>
+  <div class="extra content" style="text-align: right;">
+    <i class="star icon"></i>
+    <i class="share alternate icon"></i>
+    <button class="ui red basic button">Decline</button>
+    <button class="ui positive basic button">Accept</button>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <!-- //Jobs List -->
+
+
+  <!-- Jobs List -->
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <div class="ui fluid card job_card">
+  <div class="content">
+    <div class="header">Sample Job
+      <span class="company_logo">
+          <img src="../assets/img/fwflogo.png">
+        </span>
+    </div>
+    <div class="meta" style="color: #4183c4;">
+      <span class="category">Sample Company</span>
+    </div>
+      <div class="ui grid" style="padding-top: 10px;">
+        <div class="seven wide column">
+      <i class="location arrow icon"></i>
+      <label>Sample Location</label>
+    </div>
+    <div class="nine wide column">
+      <i class="briefcase icon"></i>
+      <label>Sample Contract</label>
+    </div>
+  </div>
+  <div class="description" style="color: grey; padding-top: 10px;">
+    Sample text Sample text Sample text Sample text
+    </div>
+  </div>
+  <div class="extra content" style="text-align: right;">
+    <i class="star icon"></i>
+    <i class="share alternate icon"></i>
+    <button class="ui red basic button">Decline</button>
+    <button class="ui positive basic button">Accept</button>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <!-- //Jobs List -->
+
+
+    </div>
+
+    <!-- //Section 2 -->
+
+
+  </div>
+</div>
+
+
+   <div class="ui inverted footer vertical segment center">
       <div class="ui stackable center aligned page grid">
         <div class="four column row">
 
