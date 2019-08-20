@@ -113,6 +113,10 @@
   font-size: 36px;
   margin-left: 50px;
 }
+
+.right.menu a:hover{
+  color: #d94b41;
+}
   @media only screen and (max-width: 800px) {
     .categories_menu {
       display: none;
@@ -185,11 +189,6 @@
   <a href="signup.php">Sign up</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
-  <a>
-  <button class="ui linkedin button">
-  Post a Job
-  </button>
-  </a>
   </div>
   <!-- //Sidebar -->
   <!-- //RESPONSIVE DESIGNS -->  
@@ -198,7 +197,7 @@
   <div class="ui large fixed menu borderless" style="padding-left: 13%; padding-right: 13%; margin-bottom: 12%;">
     <div class="item">
       <a class="logo" href="index.php">
-        <strong>FunnelWorkForce</strong>
+        <strong style="color: #d94b41;">FunnelWorkForce</strong>
       </a>
     </div>
     <a class="item">
@@ -216,9 +215,6 @@
       </div>
       <div class="item">
         <a href="signup.php">Sign up</a>
-      </div>
-      <div class="item">
-        <div class="ui primary button">Post a Job</div>
       </div>
     </div>
   </div>
@@ -242,7 +238,7 @@
 
   <!-- Banner -->
   <div class="ui top banner test ad" data-text="" style="width: 100%; height: 400px;">
-    <img src="assets/img/banner.png">
+    <img src="assets/img/bannerfwf.png">
   </div>
   <!-- //Banner -->
 
@@ -386,7 +382,7 @@
       <p>Build a pool of diverse experts for one-off tasks</p>
     </div>
     <div class="column">
-      <i class="minus icon" style="font-size: 23px; text-align: left;"></i><span><h5>Recurring projects</h5></span>
+      <i class="minus icon" style="font-size: 23px; text-align: left; color: #d94b41;"></i><span><h5>Recurring projects</h5></span>
       <p>Have a go-to team with specialized skills</p>
     </div>
      <div class="column">
@@ -406,41 +402,33 @@
     <div class="ui centered page grid" style="background-color: white;">
       <div class="sixteen wide column" style="padding: 5%;">
         <div style="padding-bottom: 7%; text-align: center; font-size: 35px;"><b>How it works</b></div>
-        <div class="ui four column center aligned stackable divided grid">
+        <div class="ui three column center aligned stackable divided grid">
           <div class="column">
           <div class="pic_container">
             <img src="assets/img/sample.jpg">
           </div>
-          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_title"><b>Create a Job Post</b></div>
           <div class="how_content">
-            Tell us about your project. Upwork connects you with top talent around the world, or near you.
-          </div>
-          </div>
-          <div class="column">
-          <div class="pic_container">
-            <img src="assets/img/sample.jpg">
-          </div>
-          <div class="how_title"><b>Post a Job</b></div>
-          <div class="how_content">
-            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+           Tell what you need and we’ll do the heavy lifting for you to find the right fit.
           </div>
           </div>
           <div class="column">
           <div class="pic_container">
             <img src="assets/img/sample.jpg">
           </div>
-          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_title"><b>Select a Category</b></div>
           <div class="how_content">
-            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+           Do you need help with Funnel Designs Facebook ads, Marketing Automations or a combination of all three? 
           </div>
           </div>
           <div class="column">
           <div class="pic_container">
             <img src="assets/img/sample.jpg">
           </div>
-          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_title"><b>Choose a Candidate</b></div>
           <div class="how_content">
-            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+           Funnelworkforce will then send you a list of candidates you can work with. All you have to do now is choose which one you’d like to work with the most.
+           Then add an icon or something that matches the description.
           </div>
           </div>
       </div>
