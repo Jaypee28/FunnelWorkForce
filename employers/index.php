@@ -8,18 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Freelancers</title>
+  <title>FunnelWorkForce-Employer Dashboard</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/homepage.css">
-
   <link rel="stylesheet" type="text/css" href="../assets/css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="../iconfonts/flaticon.css">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  <script src="../homepage-design/semantic.js"></script>
   <script src="../assets/js/homepage.js"></script>
   
 </head>
 
 <style type="text/css">
+
+  .categories_list{
+    display: none;  
+  }
 
   .sidenav {
   height: 100%;
@@ -35,7 +39,7 @@
   text-align:center;
 }
 
-  .sidenav a {
+.sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -44,45 +48,97 @@
   transition: 0.3s;
 
 }
-  .sidenav a:hover{
+
+.sidenav a:hover{
   color: #f1f1f1;
 }
 
-  .sidenav .closebtn {
+.sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
-  
-  .ui.vertical.menu.borderless {
-    border: 0px transparent;
-    box-shadow: 0px 0px 0px;
+
+.navlink a{
+  color: grey;
+}
+.navlink a:hover{
+  color: #4183c4;
 }
 
-  .ui.vertical.menu .active.item {
-    -webkit-box-shadow:;
-    box-shadow:  0px 0px 0px 1px grey;
-    color: #4183c4;
+.ui.icon.input.segment2 {
+    color: #2185d0;
 }
 
-  .ui.selection.list .list>.item.active, .ui.selection.list>.item.active {
-    background: rgba(88, 152, 255, 0.07);
-    color: #4183c4;
-    box-shadow: 0px 2px 5px 0px #cdcdcd;
-}
-  
-  .twelve.wide.column {
-    box-shadow: 0px 0px 4px 0px grey;
+.ui.search .prompt.segment2 {
+    border-radius: 500rem;
+    border: 1.5px solid #2185d0;
+    width: 250px;
 }
 
-  @media only screen and (max-width: 800px) 
-  {
+.segment3{
+  margin-top: 60px;
+  background-color: white;
+  padding-top: 30px;  
+}
+
+.segment3 a{
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+  .category_icon {
+    font-size: 40px;
+    padding-top: 8%;
+  }
+
+  .ui.fluid.card {
+    box-shadow: 0px 0px 5px 0px grey;
+    padding: 7%;
+  }
+
+.ui.secondary.pointing.menu .active.item {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #2185d0;
+    font-weight: 700;
+    color: #2185d0;
+}
+
+.ui.bottom.attached.tab.segment{
+  border: transparent;
+}
+
+.ui.primary.basic.button:hover {
+  box-shadow: 0px 0px 7px 0px !important;
+}
+
+.ui.selection.dropdown {
+    border-radius: 20px;
+}
+  @media only screen and (max-width: 800px) {
+    .categories_menu {
+      display: none;
+    }
+
     .ui.fixed.menu {
       display: none;
     }
-    
+
+    .resp_nav {
+      display: block
+    }
+
+    .categories_grid{
+    display: none;
+    }
+
+    .categories_list{
+    display: block;
+    }
   }
 </style>
 
@@ -107,7 +163,9 @@
   <!-- //RESPONSIVE NAV -->
 
   <!-- CATEGORIES_LIST -->
-
+  <div class="categories_list">
+   
+  </div>
   <!-- //CATEGORIES LIST -->
 
   <!-- Sidebar -->
@@ -137,186 +195,327 @@
   <!-- Navbar -->
   <div class="ui large fixed menu borderless" style="padding-left: 13%; padding-right: 13%; margin-bottom: 12%; padding-top: .1%; padding-bottom: .1%;">
     <div class="item">
-      <a class="logo" href="../index.php">
+      <a class="logo" href="index.php">
         <strong>FunnelWorkForce</strong>
       </a>
     </div>
-  <div class="ui pointing dropdown link item">
-    <span>Jobs</span>
+  <div class="ui pointing dropdown link item navlink">
+    <a>Jobs</a>
     <div class="menu" style="font-size: 13px;">
       <a class="item" href="">My Jobs</a>
       <a class="item" href="">All Job Postings</a>
       <a class="item" href="">All Contracts</a>
-      <a class="item" href="">Post a Job</a>
-    </div>
+     </div>
   </div>
   
-    <div class="ui pointing dropdown link item">
-    <span>Freelancers</span>
+    <div class="ui pointing dropdown link item navlink">
+    <a href="freelancerslist.php">Freelancers</a>
     <div class="menu" style="font-size: 13px;">
       <div class="item">My Freelancers</div>
       <div class="item">Find Freelancers</div>
-      <div class="item">Work Diary</div>
-      <div class="item">Bring Your Own Freelancer</div>
     </div>
   </div>
-
-  <div class="ui pointing dropdown link item">
-    <span>Reports</span>
-    <div class="menu" style="font-size: 13px;">
-      <div class="item">Weekly Summary</div>
-      <div class="item">Budgets</div>
-      <div class="item">Transactions</div>
-      <div class="item">Timesheet</div>
-      <div class="item">Time by Freelancer</div>
-      <div class="item">Time by Activity</div>
-      <div class="item">Work Diary</div>
-      <div class="item">Custom Export</div>
-    </div>
+  <div class="item navlink">
+    <a href="">Messages</a>
   </div>
-  <a class="item">
-    Messages
-  </a>
   
   <div class="right menu">
     <div class="item">
-  <div class="ui icon input">
-      <input type="text" placeholder="Search...">
-      <i class="search icon"></i>
-    </div>
+  <a href="postajob"><button class="ui button primary">Post a Job</button></a>
   </div>
-    <div class="item">
-    <div class="ui pointing dropdown link item">
-    <span>Username</span>
-    <div class="menu" style="font-size: 13px;">
+  <div class="item navlink">
+    <a href=""><i class="question icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+    <a href=""><i class="bell icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+    <a href=""><i class="user plus icon" style="font-size: 20px; padding-right: 35px;"></i></a>
+  </div>
+    <!-- Username Dropdown -->
+    <div class="ui pointing dropdown link item navlink">
+    <a href=""><i class="user circle icon" style="font-size: 28px; text-align: right;"></i></a>
+    <div class="menu" style="font-size: 13px; width: auto; padding: auto;">
       <div class="item">
         <div class="ui buttons">
       <button class="ui positive button">Online</button>
       <button class="ui button">Offline</button>
         </div><br><br>
-        <img class="ui avatar image" src="/images/wireframe/square-image.png">
-        <span>Username</span>
       </div>
-     
+
+      <div class="item">
+       <img class="ui small image" src="../../assets/img/img_avatar.png">
+        <span><strong>Sample Sample</strong></span>
+        <p style="padding-left: 38px;">Freelancer</p>
+      </div>
+      <div class="item">
+       <img class="ui small image" src="../../assets/img/img_avatar.png">
+        <span><strong>Sample Sample</strong></span>
+        <p style="padding-left: 38px;">Client</p>
+      </div>
+      <div class="item">
+        <i class="cog icon" style="padding-right: 29px;"></i><span><b>Settings</b></span>
+      </div>
+      <div class="item">
+        <i class="sign out alternate icon" style="padding-right: 29px;"></i><span><b>Log out</b></span>
+      </div>
     </div>
   </div>
-    </div>
+    
+    <!-- //Username Dropdown -->
   </div>
   </div>
   <!-- //Navbar -->
 
+    <div class="segment2">
+    <div class="ui centered page grid" style=" margin-top: 28px;">
+      <div class="sixteen wide column">
+        <div class="ui one column stackable grid">
+          <div class="column" style="margin: 13px 0px;">
+            <h2>What are you hiring for?</h2>
+      <div class="ui four column center aligned stackable grid">
+        <div class="column">
+          <div class="ui form" style="margin-top: 20px;">
+       <input type="text" placeholder="Keywords" style="border-radius: 90px;">
+     </div>
+  </div>
+   <div class="column" style="padding-top: 35px;">
+    <div class="ui selection dropdown">
+  <input type="hidden" name="gender">
+  <i class="dropdown icon"></i>
+  <div class="default text">Salary</div>
+  <div class="menu">
+    <div class="item" data-value="1">$15.00/hr</div>
+    <div class="item" data-value="2">$15.00-$30.00/hr</div>
+    <div class="item" data-value="3">More than $30.00/hr</div>
+  </div>
+</div>
+  </div>
+  <div class="column" style="padding-top: 35px;">
+    <div class="ui selection dropdown">
+  <input type="hidden" name="gender">
+  <i class="dropdown icon"></i>
+  <div class="default text">Duration</div>
+  <div class="menu">
+    <div class="item" data-value="1">1 to 3 Months</div>
+    <div class="item" data-value="2">3 to 6 Months</div>
+    <div class="item" data-value="3">More than 6 Months</div>
+  </div>
+</div>
+  </div>
+    <div class="column" style="padding-top: 35px;">
+    <a href="freelancerslist.php" class="ui blue button" style="width: 170px;">Search</a>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Verical Menu -->
-  <div class="ui grid stackable relaxed page">
-    
-    <div class="one column one column mobile demo row">
-    <div class="four wide column">
-    <div class="ui middle aligned selection list">
-  <div class="item active" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-        <i class="pencil alternate icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Title</b>
-        <i class="check circle icon" style="float: right; padding: 1%;"></i>
-      </div>
+  <!-- Categories Tab -->
+  <div class="segment3">
+    <div class="ui centered page grid">
+      <div class="sixteen wide column">
+<h5>Explore quality talent across multiple categories.</h5>
+  <div class="ui four column center aligned stackable grid">
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="laptop icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Clickfunnels</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="paint brush icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Ads</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="pencil alternate icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Front-end Funnel Designs</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="chart bar icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Phone Automation</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="wrench icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Customer Service</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="smile outline icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Search Engine Optimization</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="chart line icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">Lead generation</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
+    </div>
+    <div class="column">
+      <a class="ui fluid card" style="color: black;">
+              <div class="category_icon">
+                <i class="copy outline icon"></i>
+              </div>
+              <div class="content" style="font-size: 11px;">
+                <div class="header">E-mail Automation</div>
+                <label style="text-transform: lowercase; font-size: 13px; color: grey;">5000+ hired last month</label>
+              </div>
+          </a>
     </div>
   </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-        <i class="edit alternate icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Description</b>
-        <i class="check circle icon" style="float: right;  padding: 1%;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-         <i class="clipboard list icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Title</b>
-        <i class="check circle icon" style="float: right;  padding: 1%;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-        <i class="star icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Expertise</b>
-        <i class="check circle icon" style="float: right;  padding: 1%;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-         <i class="circle outline icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Visibility</b>
-        <i class="check circle icon" style="float: right;  padding: 1%;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-         <i class="dollar sign icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Budget</b>
-        <i class="check circle icon" style="float: right;  padding: 1%;"></i>
-      </div>
-    </div>
-  </div>
-  <div class="item" style="margin: 10px 0px;">
-    <div class="content">
-      <div style="padding: 3% 0px;">
-         <i class="check icon" style="margin-right: 18px; padding: 1%;"></i>
-        <b>Review</b>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  <div class="twelve wide column" style="margin-top: 10px; background-color: white;">
-    <div class="card_content" style="margin-top: 30px;">
-<div><h3 class="ui header">Get Started</h3>Step 1 of 7</div>
-<div class="ui section divider"></div>
-<h5 class="ui header">Enter the name of your job post</h5>
-<div class="ui form" style="padding-right: 130px;">
-  <div class="field">
-    <textarea rows="5"></textarea>
-  </div>
-</div>
-<h5 class="ui header">Here are some good examples:</h5>
-<ul>
-  <li>Developer needed for creating a responsive WordPress Theme</li>
-  <li>CAD designer to create a 3D model of a residential building</li>
-  <li>Need a design for a new company logo</li>
-</ul>
-</div>
-  </div>
-  <div class="four wide column">
-  </div>
-  <div class="twelve wide column" style="margin-top: 30px; background-color: white;">
-    <div class="card_content" style="margin-top: 30px;">
-    <h5 class="ui header">Here are some good examples:</h5>
-    <label>Enter your job title and we'll provide category suggestions for your job post.
-    <br><a style="font-size: 16px;">See all categories</a></label>
-    <div class="ui section divider"></div>
-<div class="exit_next" style="padding-bottom: 30px;">
-<button class="ui primary basic button" style="width: 100px;">
-  Exit
-</button>
-<button class="ui button" style="width: 100px;">
-  Next
-</button>
-</div>
-</div>
-</div>
-</div>
-  <!-- //Vertical Menu -->
 
-  <!-- Footer -->
-   <div class="ui inverted footer vertical segment center" style="position: relative; bottom: 0; width: 100%;">
+      </div>
+    </div>
+ 
+</div>
+  <!-- //Categories Tab -->
+
+  <!-- Trusted by -->
+  <div class="ui vertical feature segment borderless" style="margin-top: 80px;">
+    <div class="ui centered page grid">
+      <div class="sixteen wide column">
+        <div class="ui five column center aligned stackable divided grid">
+          <div class="column">
+          <h4>Some text here</h4>
+          </div>
+          <div class="column">
+          <h4>Some text here</h4>
+          </div>
+          <div class="column">
+          <h4>Some text here</h4>
+          </div>
+          <div class="column">
+          <h4>Some text here</h4>
+          </div>
+          <div class="column">
+          <h4>Some text here</h4>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- //Trusted by -->
+
+  <!-- Hire for any scope -->
+  <div class="ui vertical segment">
+    <div class="ui stackable center aligned page grid">
+     <div class="four wide column" style="text-align: left; margin-top: 50px;">
+    <h3>Hire for any scope of work</h3>
+  </div>
+  <div class="twelve wide column" style="margin-top: -20px;">
+    <div class="ui segment" style="padding: 6% 5%;text-align: left;">
+  <div class="ui three column very relaxed grid">
+    <div class="column">
+       <i class="minus icon" style="font-size: 23px; text-align: left;"></i><span><h5>Short-term tasks</h5></span>
+      <p>Build a pool of diverse experts for one-off tasks</p>
+    </div>
+    <div class="column">
+      <i class="minus icon" style="font-size: 23px; text-align: left;"></i><span><h5>Recurring projects</h5></span>
+      <p>Have a go-to team with specialized skills</p>
+    </div>
+     <div class="column">
+      <i class="minus icon" style="font-size: 23px; text-align: left;"></i><span><h5>Full-time contract work</h5></span>
+      <p>Expand your staff with a dedicated team</p>
+    </div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div>
+  <!-- //Hire for any scope -->
+
+
+  <!-- How it works -->
+  <div class="ui vertical feature segment borderless">
+    <div class="ui centered page grid" style="background-color: white;">
+      <div class="sixteen wide column" style="padding: 5%;">
+        <div style="padding-bottom: 7%; text-align: center; font-size: 35px;"><b>How it works</b></div>
+        <div class="ui four column center aligned stackable divided grid">
+          <div class="column">
+          <div class="pic_container">
+            <img src="assets/img/sample.jpg">
+          </div>
+          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_content">
+            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+          </div>
+          </div>
+          <div class="column">
+          <div class="pic_container">
+            <img src="assets/img/sample.jpg">
+          </div>
+          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_content">
+            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+          </div>
+          </div>
+          <div class="column">
+          <div class="pic_container">
+            <img src="assets/img/sample.jpg">
+          </div>
+          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_content">
+            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+          </div>
+          </div>
+          <div class="column">
+          <div class="pic_container">
+            <img src="assets/img/sample.jpg">
+          </div>
+          <div class="how_title"><b>Post a Job</b></div>
+          <div class="how_content">
+            Tell us about your project. Upwork connects you with top talent around the world, or near you.
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- //How it works -->
+
+
+    <div class="ui inverted footer vertical segment center">
       <div class="ui stackable center aligned page grid">
         <div class="four column row">
 
@@ -362,11 +561,9 @@
 
       </div>
     </div>
-  <!-- //Footer -->
-</body>
 
-    <script type="text/javascript" src="../assets/js/semantic.min.js"></script>
-    <script type="text/javascript" src="../assets/js/myjs.js"></script>
+    <script type="text/javascript" src="assets/js/semantic.min.js"></script>
+    <script type="text/javascript" src="assets/js/myjs.js"></script>
     <script>
       var prevScrollpos = window.pageYOffset;
       window.onscroll = function () {
@@ -394,6 +591,12 @@ function closeNav() {
     $(function () {
       $('.ui.card').popup();
     });
+  </script>
+
+  <script type="text/javascript">
+    $('.menu .item')
+  .tab()
+;
   </script>
      
 </body>
