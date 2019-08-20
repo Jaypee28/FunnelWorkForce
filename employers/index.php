@@ -272,11 +272,11 @@
       <div class="ui four column center aligned stackable grid">
         <div class="column">
           <div class="ui form" style="margin-top: 20px;">
-       <input type="text" placeholder="Keywords" style="border-radius: 90px;">
+       <input type="text" placeholder="Keywords">
      </div>
   </div>
    <div class="column" style="padding-top: 35px;">
-    <div class="ui selection dropdown">
+    <div class="ui selection dropdown" style="border-radius: 0px!important;">
   <input type="hidden" name="gender">
   <i class="dropdown icon"></i>
   <div class="default text">Salary</div>
@@ -288,7 +288,7 @@
 </div>
   </div>
   <div class="column" style="padding-top: 35px;">
-    <div class="ui selection dropdown">
+    <div class="ui selection dropdown" style="border-radius: 0px!important;">
   <input type="hidden" name="gender">
   <i class="dropdown icon"></i>
   <div class="default text">Duration</div>
