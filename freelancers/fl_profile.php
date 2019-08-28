@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Freelancers</title>
+  <title>Freelancer Profile</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/homepage.css">
 
   <link rel="stylesheet" type="text/css" href="../assets/css/semantic.min.css">
@@ -133,14 +133,65 @@ i.dropdown.icon {
 <body id="home" style="background-color: #f4f9ff;">
 
   <!-- MODALS-->
+  <!-- Modal Edit s1 s1 -->
+  <div class="ui modal horizontal flip eProfile" style="width: auto;">
+  <i class="close icon"></i>
+  <div class="header">
+    Edit Profile
+  </div>
+    <div class="content">
+      <div class="ui text container">
+  <form class="ui form">
+    <div class="ui grid">
+      <div class="eight wide column">
+        <form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <label>Email Address</label>
+    <input type="text" name="email-address" placeholder="Email Address">
+  </div>
+  <div class="field">
+    <label>Phone Number</label>
+    <input type="text" name="phone-number" placeholder="Phone Number">
+  </div>
+</form>
+      </div>
+      <div class="eight wide column">
+        <div class="sixteen wide field">
+    <div class="ui image-upload-pp segment">
+      <img style="margin-bottom: 10px" class="ui medium rounded image" src="http://icons.indats.com/sewlong/justin.jpg">
+       <a class="ui mini button">Remove</a>
+       <a class="ui mini blue button">Upload</a>
+    </div>
+  </div>
+      </div>
+    </div>
+
+</form>
+</div>
+
+
+</div>
+
+    </div>
+</div>
+  <!-- //Modal Edit s1 s1 -->
+
   <!-- Modal Edit s2 s1 -->
-  <div class="ui modal horizontal flip eProfileSummary" style="width: 500px;">
+  <div class="ui modal horizontal flip eProfileSummary" style="width: auto;">
   <i class="close icon"></i>
   <div class="header">
     Profile Summary
   </div>
     <div class="content">
-      <form class="ui form">
+      <form class="ui form" style="width: 300px;">
   <div class="field">
     <input type="text" name="summary" placeholder="Enter your Summary">
   </div>
@@ -155,13 +206,13 @@ i.dropdown.icon {
   <!-- //Modal Edit s2 s1 -->
 
    <!-- Modal Edit s2 s3 -->
-  <div class="ui modal horizontal flip eSkills" style="width: 500px;">
+  <div class="ui modal horizontal flip eSkills" style="width: auto;">
   <i class="close icon"></i>
   <div class="header">
     Skills
   </div>
     <div class="content">
-<form class="ui form">
+<form class="ui form" style="width: 300px">
 <select name="skills" multiple="" class="ui fluid search dropdown">
 <option value="">Skills</option>
 <option value="angular">Angular</option>
@@ -194,13 +245,13 @@ i.dropdown.icon {
   <!-- //Modal Edit s2 s3 -->
 
     <!-- Modal Edit s2 s4 -->
-  <div class="ui modal horizontal flip eJobPreference" style="width: 500px;">
+  <div class="ui modal horizontal flip eJobPreference" style="width: auto;">
   <i class="close icon"></i>
   <div class="header">
     Job Preference
   </div>
     <div class="scrolling content">
- <form class="ui form">
+ <form class="ui form" style="width: 300px;">
   <div class="field">
     <label>Industry</label>
     <input type="text" name="industry" placeholder="Industry">
@@ -266,13 +317,13 @@ i.dropdown.icon {
   <!-- //Modal Edit s2 s4 -->
 
     <!-- Modal Edit s2 s6 -->
-  <div class="ui modal horizontal flip eEducation" style="width: 500px;">
+  <div class="ui modal horizontal flip eEducation" style="width: auto;">
   <i class="close icon"></i>
   <div class="header">
     Educational Details
   </div>
     <div class="content">
-      <form class="ui form">
+      <form class="ui form" style="width: 310px;">
   <div class="field">
     <label>Degree</label>
     <input type="text" name="degree" placeholder="Degree">
@@ -292,13 +343,13 @@ i.dropdown.icon {
   <!-- //Modal Edit s2 s6 -->
   
   <!-- Modal Edit s2 s8 -->
-  <div class="ui modal horizontal flip ePersonalDetails" style="width: 500px;">
+  <div class="ui modal horizontal flip ePersonalDetails" style="width: auto;">
   <i class="close icon"></i>
   <div class="header">
     Personal Details
   </div>
     <div class="content">
-      <form class="ui form">
+      <form class="ui form" style="width: 310px;">
   <div class="field">
     <label>Home Town</label>
     <input type="text" name="hometown" placeholder="Home Town">
@@ -468,7 +519,7 @@ i.dropdown.icon {
   <div class="content">
     <div class="ui list">
   <div class="item center aligned">
-    <a style="float: right;"><i class="pencil alternate icon"></i></a>
+    <a id="eProfile" style="float: right;"><i class="pencil alternate icon"></i></a>
     <img class="ui avatar image" src="../assets/img/img_avatar.png" style="height: 60px; width: 60px; margin-left: 25px;">
     <h3 class="header">Username</h3>
     <div class="description">Iloilo</div>
@@ -749,6 +800,17 @@ function closeNav() {
   </script>
 
   <!-- Modal -->
+  <script>
+    $(function(){
+  $("#eProfile").click(function(){
+    $(".eProfile").modal('show');
+  });
+  $(".eProfile").modal({
+    closable: true
+  });
+});
+  </script>
+
     <script>
     $(function(){
   $("#eProfileSummary").click(function(){
