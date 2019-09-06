@@ -67,6 +67,22 @@
     }
   }
 
+  a.item:hover{
+    color: #2185d0!important;
+    font-weight: bold!important;
+  }
+
+  a.item.active{
+    background-color: #2185d0!important;
+    color: white!important;
+  }
+
+  @media only screen and (max-width: 570px) {
+    .ui.top.attached.tabular.menu{
+      padding-left: 0px!important;
+    }
+  }
+
 </style>
 
 
@@ -118,26 +134,81 @@
   <!-- Signup Form -->
 <div class="ui middle aligned center aligned grid" style="margin-bottom: 70px; padding: 4%;">
   <div class="column">
-     <div class="ui fluid card" style="margin-top: 30px; margin-bottom: 100px; padding: 4% 7% 2% 7%;">
+     <div class="ui fluid card" style="margin-top: 30px; margin-bottom: 100px; padding: 2% 7% 2% 7%;">
         <div class="content">
           <h2>Signup</h2>
-     <div class="ui form">
-  <div class="two fields">
-    <div class="field">
-      <label>First name</label>
-      <input type="text" placeholder="First Name">
-    </div>
-    <div class="field">
-      <label>Last name</label>
-      <input type="text" placeholder="Last Name">
-      </div>
-    </div>
-      <div class="field">
-      <label>Email</label>
-      <input type="email" placeholder="Email Address">
-      <button class="ui button primary" type="submit" style="width: 170px; margin: 25px 0px;">Get Started</button>
+          <hr>
+          <div class="ui top attached tabular menu" style="border: none!important; padding-left: 80px;">
+            <a class="item active" data-tab="first" style="border: none!important; font-size: 18px;">Freelancer</a>
+            <a class="item" data-tab="second" style="border: none!important; font-size: 18px;">Employer</a>
+          </div>
+
+          <div class="ui bottom attached tab segment active" data-tab="first" style="border: none!important">
+            <div class="ui form" style="padding-top: 30px; font-size: 16px;">
+              <div class="two fields">
+                <div class="field">
+                  <label>First name</label>
+                  <input type="text" placeholder="First Name">
+                </div>
+            <div class="field">
+            <label>Last name</label>
+            <input type="text" placeholder="Last Name">
+            </div>
+            </div>
+          <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="Email Address">
+          <button class="ui button primary" type="submit" style="width: 170px; margin: 25px 0px;">Get Started</button>
              </div>
            </div>
+          </div>
+
+          <div class="ui bottom attached tab segment" data-tab="second" style="border: none!important">
+            <div class="ui form" style="padding-top: 30px; font-size: 16px;">
+              <div class="two fields">
+                <div class="field">
+                  <label>First name</label>
+                  <input type="text" placeholder="First Name">
+                </div>
+          <div class="field">
+            <label>Last name</label>
+            <input type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="field">
+          <label>Email Address</label>
+          <input type="email" placeholder="Email Address">
+          </div>
+          <div class="field">
+            <label>Company name</label>
+            <input type="text" placeholder="Company Name">
+            </div>
+            <div class="field">
+            <label>Company Location</label>
+            <input type="text" placeholder="Company Location">
+            </div>
+            <div class="ui form" style="font-size: 16px;">
+              <div class="field">
+                <label>Company Description</label>
+                <textarea rows="2"></textarea>
+              </div>
+            </div>
+            <div class="field" style="margin-top: 15px;">
+            <label>Company Email</label>
+            <input type="email" placeholder="Company Email">
+            </div>
+            <div class="field" style="margin-top: 15px;">
+            <label>Company Contact</label>
+            <input type="text" placeholder="Company Contact">
+            </div>
+            <div class="field" style="margin-top: 15px;">
+            <label>Password</label>
+            <input type="password" placeholder="Password">
+            </div>
+            <button class="ui button primary" type="submit" style="width: 170px; margin: 25px 0px;">Get Started</button>
+             </div>
+           </div>
+          </div>
          </div>
         </div>
       </div>
@@ -149,7 +220,7 @@
   
 
 
-    <div class="ui inverted footer vertical segment center" style="position: absolute; bottom: 0; width: 100%;">
+    <div class="ui inverted footer vertical segment center" style="bottom: 0; width: 100%;">
       <div class="ui stackable center aligned page grid">
         <div class="four column row">
 
@@ -198,7 +269,10 @@
 
     <script type="text/javascript" src="assets/js/semantic.min.js"></script>
     <script type="text/javascript" src="assets/js/myjs.js"></script>
-    
+    <script type="text/javascript">
+      $('.menu .item')
+        .tab();
+    </script>
      
 </body>
 
