@@ -92,7 +92,7 @@ button.ui.positive.basic.button:hover {
 
 .company_logo img{
   height: 69px;
-  width: 85px;
+  width: 83px;
   float: right;
   border: 1px solid #e1e1e1;
   padding: 2px;
@@ -112,6 +112,14 @@ button.ui.positive.basic.button:hover {
     }
     
   }
+
+.job_card{
+  color: black!important;
+}
+
+a.card.job_card:hover{
+ box-shadow: 0px 4px 10px 5px grey;
+}
 </style>
 
 
@@ -169,23 +177,13 @@ button.ui.positive.basic.button:hover {
         <strong>FunnelWorkForce</strong>
       </a>
     </div>
-  <div class="ui pointing dropdown link item navlink">
-    <a>Accept Work</a>
-    <div class="menu" style="font-size: 13px;">
-      <a class="item" href="">Accept Work</a>
-      <a class="item" href="">Saved Jobs</a>
-      <a class="item" href="">Profile</a>
-      <a class="item" href="">My Stats</a>
-    </div>
+  
+  <div class="item navlink">
+    <a href="my_jobs.php">My Jobs</a>
   </div>
   
-    <div class="ui pointing dropdown link item navlink">
-    <a>My Jobs</a>
-    <div class="menu" style="font-size: 13px;">
-      <div class="item">My Jobs</div>
-      <div class="item">All Contracts</div>
-      <div class="item">Work Diary</div>
-    </div>
+  <div class="item navlink">
+    <a href="freelancerslist.php">Freelancers</a>
   </div>
 
   <div class="item navlink">
@@ -281,16 +279,16 @@ button.ui.positive.basic.button:hover {
 
     <!-- Section 2 -->
     <div class="sixteen wide column" style="margin-top: -10px; padding-left: -10px;">
-  <div class="ui fluid card" style="padding: 10px; background-color: white;">
-  <h2>Freelancers</h2>
-</div>
+  
+    <h1>Freelancers</h1>
+
 
 <!-- s2 s2 -->
 
 <!-- Jobs List -->
 <div class="ui grid">
   <div class="sixteen wide column">
-    <div class="ui fluid card job_card">
+    <a href="fl_profile.php" class="ui fluid card job_card">
   <div class="content">
     <div class="header" style="margin-bottom: 20px;font-size: 20px;">Freelancer Name
         <span class="company_logo">
@@ -315,7 +313,7 @@ button.ui.positive.basic.button:hover {
     Sample text Sample text Sample text Sample text
     </div>
   </div>
-</div>
+</a>
   </div>
   </div>
 
@@ -324,7 +322,7 @@ button.ui.positive.basic.button:hover {
   <!-- Jobs List -->
 <div class="ui grid">
   <div class="sixteen wide column">
-    <div class="ui fluid card job_card">
+    <a class="ui fluid card job_card">
   <div class="content">
     <div class="header" style="margin-bottom: 20px;font-size: 20px;">Freelancer Name
         <span class="company_logo">
@@ -349,7 +347,7 @@ button.ui.positive.basic.button:hover {
     Sample text Sample text Sample text Sample text
     </div>
   </div>
-</div>
+</a>
   </div>
   </div>
 
@@ -358,7 +356,7 @@ button.ui.positive.basic.button:hover {
   <!-- Jobs List -->
 <div class="ui grid">
   <div class="sixteen wide column">
-   <div class="ui fluid card job_card">
+   <a class="ui fluid card job_card">
   <div class="content">
     <div class="header" style="margin-bottom: 20px;font-size: 20px;">Freelancer Name
         <span class="company_logo">
@@ -383,7 +381,7 @@ button.ui.positive.basic.button:hover {
     Sample text Sample text Sample text Sample text
     </div>
   </div>
-</div>
+</a>
   </div>
   </div>
 
@@ -392,7 +390,7 @@ button.ui.positive.basic.button:hover {
   <!-- Jobs List -->
 <div class="ui grid">
   <div class="sixteen wide column">
-  <div class="ui fluid card job_card">
+  <a class="ui fluid card job_card">
   <div class="content">
     <div class="header" style="margin-bottom: 20px;font-size: 20px;">Freelancer Name
         <span class="company_logo">
@@ -417,7 +415,7 @@ button.ui.positive.basic.button:hover {
     Sample text Sample text Sample text Sample text
     </div>
   </div>
-</div>
+</a>
   </div>
   </div>
 
