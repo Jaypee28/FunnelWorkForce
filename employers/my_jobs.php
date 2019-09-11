@@ -272,7 +272,7 @@ button.ui.positive.basic.button:hover {
 <!-- Jobs List -->
 <div class="ui grid">
   <div class="sixteen wide column">
-    <a href="my_job.php" class="ui fluid card job_card">
+    <a href="job_detail.php" class="ui fluid card job_card">
   <div class="content">
 
     <div class="ui grid" style="padding: 12px;">
